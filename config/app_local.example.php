@@ -25,52 +25,24 @@ return [
      *   You should treat it as extremely sensitive data.
      */
     'Security' => [
-        'salt' => env('SECURITY_SALT', '__SALT__'),
+        'salt' => env('SECURITY_SALT', '15b21492aeea878f34eb9ad000d54a5bd94bf27a19a02b9e012438bfee7daa5e'),
     ],
 
-    /*
-     * Connection information used by the ORM to connect
-     * to your application's datastores.
-     *
-     * See app.php for more configuration options.
-     */
+    // Database
     'Datasources' => [
         'default' => [
-            'host' => 'localhost',
-            /*
-             * CakePHP will use the default DB port based on the driver selected
-             * MySQL on MAMP uses port 8889, MAMP users will want to uncomment
-             * the following line and set the port accordingly
-             */
-            //'port' => 'non_standard_port_number',
-
-            'username' => 'my_app',
-            'password' => 'secret',
-
-            'database' => 'my_app',
-            /*
-             * If not using the default 'public' schema with the PostgreSQL driver
-             * set it here.
-             */
-            //'schema' => 'myapp',
-
-            /*
-             * You can use a DSN string to set the entire configuration
-             */
-            'url' => env('DATABASE_URL', null),
+            'host' => env('DATABASE_HOST'),
+            'username' => env('DATABASE_USER_NAME'),
+            'password' => env('DATABASE_PASSWORD'),
+            'database' => env('DATABASE_SCHEMA'),
         ],
 
-        /*
-         * The test connection is used during the test suite.
-         */
+        // test Database
         'test' => [
-            'host' => 'localhost',
-            //'port' => 'non_standard_port_number',
-            'username' => 'my_app',
-            'password' => 'secret',
-            'database' => 'test_myapp',
-            //'schema' => 'myapp',
-            'url' => env('DATABASE_TEST_URL', 'sqlite://127.0.0.1/tests.sqlite'),
+            'host' => env('TEST_DATABASE_HOST'),
+            'username' => env('TEST_DATABASE_USER_NAME'),
+            'password' => env('TEST_DATABASE_PASSWORD'),
+            'database' => env('TEST_DATABASE_SCHEMA'),
         ],
     ],
 

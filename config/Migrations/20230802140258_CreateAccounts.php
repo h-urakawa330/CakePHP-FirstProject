@@ -71,13 +71,43 @@ class CreateAccounts extends AbstractMigration
             'limit' => 10,
             'null' => false,
             'default' => CodeConstant::NOT_CHANGED,
-            'comment' => '初回パスワード変更フラグ',
+            'comment' => 'ログイン試行回数',
         ]);
 
         $table->addColumn('is_changed', 'boolean', [
             'null' => false,
+            'default' => CodeConstant::NOT_CHANGED,
+            'comment' => '初回パスワード変更フラグ',
+        ]);
+
+        $table->addColumn('is_deleted', 'boolean', [
+            'null' => false,
             'default' => CodeConstant::NOT_DELETED,
             'comment' => '削除フラグ',
+        ]);
+
+        $table->addColumn('created', 'datetime', [
+            'default' => null,
+            'null' => true,
+            'comment' => 'データ作成日時',
+        ]);
+
+        $table->addColumn('created_by', 'biginteger', [
+            'default' => null,
+            'null' => true,
+            'comment' => 'データ作成者',
+        ]);
+
+        $table->addColumn('modified', 'datetime', [
+            'default' => null,
+            'null' => true,
+            'comment' => 'データ更新日時',
+        ]);
+
+        $table->addColumn('modified_by', 'biginteger', [
+            'default' => null,
+            'null' => true,
+            'comment' => 'データ更新者',
         ]);
 
         $table->addIndex(['id']);

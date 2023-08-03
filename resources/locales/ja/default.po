@@ -1,0 +1,43 @@
+###
+### 処理成功メッセージ
+###
+
+# fetch success
+msgid "SUCCESS_0001"
+msgstr "データを一覧取得しました。"
+
+###
+### 処理失敗メッセージ
+###
+
+# fetch error
+msgid "ERROR_0001"
+msgstr "条件に合致するデータが存在しません。"
+
+###
+### 処理失敗メッセージ
+###
+
+# required validation
+msgid "VALIDATION_0001"
+msgstr "{0}は必須です。"
+
+# empty validation
+msgid "VALIDATION_0002"
+msgstr "{0}が未設定です。"
+
+# integer validation
+msgid "VALIDATION_0003"
+msgstr "{0}の形式が不正です。数値型で入力してください。"
+
+# maxlength validation
+msgid "VALIDATION_0004"
+msgstr "{0}は{1}文字以内で入力してください。"
+
+# datetime validation
+msgid "VALIDATION_0005"
+msgstr "{0}の形式が不正です。指定の形式(YYYY/MM/DD hh:mm:ss)で入力してください。"
+
+# boolean validation
+msgid "VALIDATION_0006"
+msgstr "{0}の形式が不正です。指定の形式(0 or 1)で入力してください。"

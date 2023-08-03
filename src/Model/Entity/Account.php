@@ -18,6 +18,11 @@ use Cake\ORM\Entity;
  * @property \Cake\I18n\FrozenTime $last_login_at
  * @property int $attempt_count
  * @property bool $is_changed
+ * @property bool $is_deleted
+ * @property \Cake\I18n\FrozenTime|null $created
+ * @property int|null $created_by
+ * @property \Cake\I18n\FrozenTime|null $modified
+ * @property int|null $modified_by
  */
 class Account extends Entity
 {
@@ -41,5 +46,10 @@ class Account extends Entity
         'last_login_at' => true,
         'attempt_count' => true,
         'is_changed' => true,
+        'is_deleted' => true,
+        'created' => true,
+        'created_by' => true,
+        'modified' => true,
+        'modified_by' => true,
     ];
 }

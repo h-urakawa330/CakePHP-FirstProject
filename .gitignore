@@ -5,4 +5,8 @@
 /.idea/*
 
 /config/app_local.php
+/config/.env
 
+/config/Migrations/schema-dump-default.lock
+
+/tests/Fixture/.gitkeep
